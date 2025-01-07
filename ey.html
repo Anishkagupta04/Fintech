@@ -1,0 +1,182 @@
+<html></html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 20 14.3% 4.1%;
+--card: 0 0% 100%;
+--card-foreground: 20 14.3% 4.1%;
+--popover: 0 0% 100%;
+--popover-foreground: 20 14.3% 4.1%;
+--primary: 47.9 95.8% 53.1%;
+--primary-foreground: 26 83.3% 14.1%;
+--secondary: 60 4.8% 95.9%;
+--secondary-foreground: 24 9.8% 10%;
+--muted: 60 4.8% 95.9%;
+--muted-foreground: 25 5.3% 44.7%;
+--accent: 60 4.8% 95.9%;
+--accent-foreground: 24 9.8% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 60 9.1% 97.8%;
+--border: 20 5.9% 90%;
+--input: 20 5.9% 90%;
+--ring: 20 14.3% 4.1%;
+--radius: 0.95rem;
+				}
+				.dark {
+					--background: 20 14.3% 4.1%;
+--foreground: 60 9.1% 97.8%;
+--card: 20 14.3% 4.1%;
+--card-foreground: 60 9.1% 97.8%;
+--popover: 20 14.3% 4.1%;
+--popover-foreground: 60 9.1% 97.8%;
+--primary: 47.9 95.8% 53.1%;
+--primary-foreground: 26 83.3% 14.1%;
+--secondary: 12 6.5% 15.1%;
+--secondary-foreground: 60 9.1% 97.8%;
+--muted: 12 6.5% 15.1%;
+--muted-foreground: 24 5.4% 63.9%;
+--accent: 12 6.5% 15.1%;
+--accent-foreground: 60 9.1% 97.8%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 60 9.1% 97.8%;
+--border: 12 6.5% 15.1%;
+--input: 12 6.5% 15.1%;
+--ring: 35.5 91.7% 32.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen bg-background text-foreground">
+  <header class="flex justify-between items-center p-4 bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg">
+    <h1 class="text-4xl font-bold text-white">Finance Dashboard</h1>
+    <div class="flex items-center">
+      <span class="mr-2 font-semibold text-yellow-300">Claudia Alves</span>
+      <button class="bg-yellow-500 text-white px-4 py-2 rounded shadow hover:bg-yellow-400 transition">Assign Member</button>
+    </div>
+  </header>
+  <div class="flex flex-1">
+    <aside class="w-1/4 bg-zinc-800 p-4 shadow-lg">
+      <input type="text" placeholder="Search" class="border border-zinc-600 p-2 rounded w-full mb-4 focus:outline-none focus:ring focus:ring-blue-500" />
+      <nav>
+        <ul>
+          <li class="mb-2"><a href="#" class="text-zinc-400 hover:text-blue-300 transition">Dashboard</a></li>
+          <li class="mb-2"><a href="#" class="text-zinc-400 hover:text-blue-300 transition">Resources</a></li>
+          <li class="mb-2"><a href="#" class="text-zinc-400 hover:text-blue-300 transition">Investments</a></li>
+          <li class="mb-2"><a href="#" class="text-zinc-400 hover:text-blue-300 transition">Statistics</a></li>
+          <li class="mb-2"><a href="#" class="text-zinc-400 hover:text-blue-300 transition">Community</a></li>
+        </ul>
+      </nav>
+      <div class="mt-4">
+        <h2 class="font-semibold text-yellow-300">Your Future Goals</h2>
+        <ul class="list-disc ml-5 text-zinc-400">
+          <li>Emergency Fund</li>
+          <li>Debt Repayment</li>
+          <li>Home Purchase</li>
+        </ul>
+      </div>
+    </aside>
+    <main class="flex-1 p-4">
+      <section class="mb-4">
+        <h2 class="font-semibold text-yellow-300">Report and Analysis</h2>
+        <div class="bg-zinc-900 p-4 rounded-lg shadow-lg">
+          <canvas id="myChart" class="w-full h-48"></canvas>
+          <div class="flex justify-between mt-4">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition">Project A</button>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition">Project B</button>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition">Project C</button>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition">Details</button>
+          </div>
+          <p class="text-zinc-400 mt-2">Click here to get complete summary report</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="font-semibold text-yellow-300">Progress</h2>
+        <div class="bg-zinc-900 p-4 rounded-lg shadow-lg flex flex-col">
+          <div class="flex items-center mb-4">
+            <div class="w-1/2">
+              <h3 class="font-semibold text-white">Expenses Management</h3>
+              <div class="relative">
+                <div class="bg-blue-600 h-2 rounded" style="width: 70%;"></div>
+                <span class="absolute right-0 text-zinc-400">70%</span>
+              </div>
+              <p class="text-zinc-400">Almost perfect on the expenses, maintain and continue to grow!</p>
+            </div>
+          </div>
+          <div class="flex items-center mb-4">
+            <div class="w-1/2">
+              <h3 class="font-semibold text-white">Billing</h3>
+              <div class="relative">
+                <div class="bg-blue-600 h-2 rounded" style="width: 50%;"></div>
+                <span class="absolute right-0 text-zinc-400">50%</span>
+              </div>
+              <p class="text-zinc-400">Almost halfway through billing, don't give up and never surrender!</p>
+            </div>
+          </div>
+          <div class="flex items-center mb-4">
+            <div class="w-1/2">
+              <h3 class="font-semibold text-white">Revision</h3>
+              <div class="relative">
+                <div class="bg-blue-600 h-2 rounded" style="width: 30%;"></div>
+                <span class="absolute right-0 text-zinc-400">30%</span>
+              </div>
+              <p class="text-zinc-400">Almost done with the revisions, great job! Keep it up!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+  </body>
+</html>
